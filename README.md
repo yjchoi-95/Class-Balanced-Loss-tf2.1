@@ -1,10 +1,7 @@
 # Class-Balanced-Loss-tf2.1
 [CVPR 2019] Class-Balanced Loss Based on Effective Number of Samples
 
-![Alt text](C:\Users\PC0\Desktop\논문스터디\Class imbalance\cb_loss_tf2\temp_image.png)
-
-
-url : http://openaccess.thecvf.com/content_CVPR_2019/papers/Cui_Class-Balanced_Loss_Based_on_Effective_Number_of_Samples_CVPR_2019_paper.pdf
+url : <http://openaccess.thecvf.com/content_CVPR_2019/papers/Cui_Class-Balanced_Loss_Based_on_Effective_Number_of_Samples_CVPR_2019_paper.pdf>
 
 #### Example
 ```
