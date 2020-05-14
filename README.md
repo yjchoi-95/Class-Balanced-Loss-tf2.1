@@ -1,6 +1,8 @@
 # Class-Balanced-Loss-tf2.1
 [CVPR 2019] Class-Balanced Loss Based on Effective Number of Samples
 
+url : http://openaccess.thecvf.com/content_CVPR_2019/papers/Cui_Class-Balanced_Loss_Based_on_Effective_Number_of_Samples_CVPR_2019_paper.pdf
+
 #### Example
 ```
 from utils import *
@@ -9,8 +11,13 @@ import tensorflow as tf
 ## load cifar 10
 (train_images, train_labels), (test_images, test_labels) = tf.keras.datasets.cifar10.load_data()
 
+## get imbalanced data
+np.random.seed(0)
+major_class, minor_class = np.random.choice(range(9), size = 2, replace = False)
+train_images_im, train_labels_im = make_imbalanced_set(train_images, train_labels, major_class, minor_class, imbalance_factor_=20)
+
 ## change labels shape
-train_labels_ = tf.one_hot(train_labels, depth=10).numpy().reshape(-1, 10)
+train_labels_im_ = tf.one_hot(train_labels_im, depth=10).numpy().reshape(-1, 10)
 test_labels_ = tf.one_hot(test_labels, depth=10).numpy().reshape(-1, 10)
 
 ## calculate # of samples, beta, class balanced term per class
