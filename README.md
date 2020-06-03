@@ -34,4 +34,5 @@ history_cb = cb_vgg16.fit(train_images_im, train_labels_im_, validation_split=0.
 
 ```
 
-
+#### paper review
+<https://yjchoi-95.gitbook.io/paper-review/cvpr-2019-class-balanced-loss-based-on-effective-number-of-samples>
